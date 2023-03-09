@@ -18,6 +18,8 @@ defmodule HolaWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/hola", HelloController, :index
+    get "/hola/:mensaje", HelloController, :show
   end
 
   # Other scopes may use custom stacks.
